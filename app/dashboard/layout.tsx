@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./style.scss"
 import { Inter } from "next/font/google";
 import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 
       </Head>

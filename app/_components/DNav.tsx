@@ -1,5 +1,6 @@
 import { FaPencil } from "react-icons/fa6";
 import { FaRegUserCircle } from "react-icons/fa";
+import Link from "next/link";
 const DNavbar: React.FC = () => {
   return (
     <nav className="flex justify-between w-full  px-10 py-3 items-center fixed  bg-[#E17E26] z-10">
@@ -14,18 +15,21 @@ const DNavbar: React.FC = () => {
           <input className="ml-2 outline-none" type="text" name="search" id="search" placeholder="Search..." />
         </div>
         <li>
-        <button
+        <Link
         type="button"
+        href={"/dashboard/addpost"}
         className="inline-flex transition-all duration-500 items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-[#E17E26] bg-white hover:bg-[#E17E26] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
         <FaPencil className="mx-2"/>
         Add Swings
-      </button>
+      </Link>
         </li>
         </ul>
       <div className="flex items-center">
         <ul className="flex items-center space-x-6">
           <li className="">
-            <FaRegUserCircle  className="text-[20px]"/>
+            <Link href={"/dashboard/profile"}>
+              <FaRegUserCircle  className="text-[20px]"/>
+            </Link>
           </li>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
